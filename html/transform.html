@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header-menu">menu</div>
+      <a class="header-title" href="../index.html">CSS</a>
+      <a class="header-repo" href="">This Project's Repo</a>
+    </header>
+    <nav id="side-menu">
+      <ul>
+        <li><a href="./border.html">BORDER</a></li>
+        <li><a href="./transform.html">TRANSFORM</a></li>
+      </ul>
+    </nav>
+    <main id="css-main-container">
+      <div id="css-header">
+        <div id="css-title-wrapper">
+          <h3 id="css-title">
+            <span id="css-spane_1">T</span>
+            <span id="css-spane_2">r</span>
+            <span id="css-spane_3">a</span>
+            <span id="css-spane_4">n</span>
+            <span id="css-spane_5">s</span>
+            <span id="css-spane_6">f</span>
+            <span id="css-spane_7">o</span>
+            <span id="css-spane_8">r</span>
+            <span id="css-spane_9">m</span>
+          </h3>
+        </div>
+        <div id="css-description-wrapper">
+          <div id="css-description">
+            Manipulating the visual representation of an element through
+            scaling, rotation, skewing, or translation.
+          </div>
+        </div>
+      </div>
+      <div id="css-list">
+        <!-- translate -->
+        <div class="css-list-itme" id="translate">
+          <div
+            class="css-item-view"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              class="test-element"
+              style="
+                width: 100px;
+                height: 100px;
+                background-color: royalblue;
+                transform: translate(0);
+              "
+            ></div>
+          </div>
+          <div class="css-item-description">
+            transform: translate(
+            <input
+              class="item-input"
+              id="translate-translate"
+              type="number"
+            />px,
+            <input
+              class="item-input"
+              id="translate-translate_1"
+              type="number"
+            />px );
+          </div>
+        </div>
+        <div class="css-list-itme" id="translateX">
+          <div
+            class="css-item-view"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              class="test-element"
+              style="
+                width: 100px;
+                height: 100px;
+                background-color: royalblue;
+                transform: translateX(0);
+              "
+            ></div>
+          </div>
+          <div class="css-item-description">
+            transform: translateX(
+            <input
+              class="item-input"
+              id="translateX-translateX"
+              type="number"
+            />px );
+          </div>
+        </div>
+        <div class="css-list-itme" id="translateY">
+          <div
+            class="css-item-view"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              class="test-element"
+              style="
+                width: 100px;
+                height: 100px;
+                background-color: royalblue;
+                transform: translateY(0);
+              "
+            ></div>
+          </div>
+          <div class="css-item-description">
+            transform: translateY(
+            <input
+              class="item-input"
+              id="translateY-translateY"
+              type="number"
+            />px );
+          </div>
+        </div>
+        <!-- scale -->
+        <div class="css-list-itme" id="scale">
+          <div
+            class="css-item-view"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              class="test-element"
+              style="
+                width: 100px;
+                height: 100px;
+                background-color: royalblue;
+                transform: scale(0);
+              "
+            ></div>
+          </div>
+          <div class="css-item-description">
+            transform: scale(
+            <input class="item-input" id="scale-scale" type="number" /> deg);
+          </div>
+        </div>
+        <!-- rotate -->
+        <div class="css-list-itme" id="rotate">
+          <div
+            class="css-item-view"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              class="test-element"
+              style="
+                width: 100px;
+                height: 100px;
+                background-color: royalblue;
+                transform: rotate(0);
+              "
+            ></div>
+          </div>
+          <div class="css-item-description">
+            transform: rotate(
+            <input class="item-input" id="rotate-rotate" type="number" /> deg);
+          </div>
+        </div>
+        <!-- skew -->
+        <div class="css-list-itme" id="skewX">
+          <div
+            class="css-item-view"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              class="test-element"
+              style="
+                width: 100px;
+                height: 100px;
+                background-color: royalblue;
+                transform: skewX(0);
+              "
+            ></div>
+          </div>
+          <div class="css-item-description">
+            transform: skewX(
+            <input class="item-input" id="skewX-skewX" type="number" /> deg);
+          </div>
+        </div>
+        <div class="css-list-itme" id="skewY">
+          <div
+            class="css-item-view"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              class="test-element"
+              style="
+                width: 100px;
+                height: 100px;
+                background-color: royalblue;
+                transform: skewY(0);
+              "
+            ></div>
+          </div>
+          <div class="css-item-description">
+            transform: skewY(
+            <input class="item-input" id="skewY-skewY" type="number" /> deg);
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.getElementById("header-menu");
+      const sideMenu = document.getElementById("side-menu");
+
+      menuBtn.addEventListener("click", (event) => {
+        sideMenu.classList.toggle("slide");
+        event.stopPropagation();
+      });
+
+      document.addEventListener("click", (event) => {
+        if (sideMenu.classList.contains("slide")) {
+          const isOpenSideMenu = sideMenu.contains(event.target);
+          if (!isOpenSideMenu) {
+            sideMenu.classList.remove("slide");
+          }
+        }
+      });
+
+      const transformConfigs = [
+        {
+          inputId: ["translate-translate", "translate-translate_1"],
+          targetEl: "#translate .test-element",
+          css: (values) =>
+            `translate(${values[0] || 0}px, ${values[1] || 0}px)`,
+        },
+        {
+          inputId: "translateX-translateX",
+          targetEl: "#translateX .test-element",
+          css: (value) => `translateX(${value}px)`,
+        },
+        {
+          inputId: "translateY-translateY",
+          targetEl: "#translateY .test-element",
+          css: (value) => `translateY(${value}px)`,
+        },
+        {
+          inputId: "scale-scale",
+          targetEl: "#scale .test-element",
+          css: (value) => `scale(${value})`,
+        },
+        {
+          inputId: "rotate-rotate",
+          targetEl: "#rotate .test-element",
+          css: (value) => `rotate(${value}deg)`,
+        },
+        {
+          inputId: "skewX-skewX",
+          targetEl: "#skewX .test-element",
+          css: (value) => `skewX(${value}deg)`,
+        },
+        {
+          inputId: "skewY-skewY",
+          targetEl: "#skewY .test-element",
+          css: (value) => `skewY(${value}deg)`,
+        },
+      ];
+
+      transformConfigs.forEach(({ inputId, targetEl, css }) => {
+        const target = document.querySelector(targetEl);
+        if (!target) return;
+
+        if (Array.isArray(inputId)) {
+          const inputs = inputId.map((id) => document.getElementById(id));
+
+          inputs.forEach((input) => {
+            input.addEventListener("input", () => {
+              const values = inputs.map((input) => input.value || 0);
+              target.style.transform = css(values);
+            });
+          });
+        } else {
+          const input = document.getElementById(inputId);
+
+          input.addEventListener("input", () => {
+            const value = input.value || 0;
+            target.style.transform = css(value);
+          });
+        }
+      });
+    });
+  </script>
+</html>

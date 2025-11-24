@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>CSS</title>
+  </head>
+  <body>
+    <header>
+      <div id="header-menu">menu</div>
+      <a class="header-title" href="index.html">CSS</a>
+      <a class="header-repo" href="">This Project's Repo</a>
+    </header>
+    <nav id="side-menu">
+      <ul>
+        <!-- <li><a href="">MARGIN / PADDING</a></li>
+        <li><a href="display.html">DISPLAY</a></li>
+        <li><a href="position.html">POSITION</a></li>
+        <li><a href="flex.html">FLEX</a></li> -->
+        <!-- <li><a href="transition.html">TRANSITION</a></li> -->
+        <li><a href="./html/border.html">BORDER</a></li>
+        <li><a href="./html/transform.html">TRANSFORM</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <main>
+        <div class="main-slogan">PIXEL ARCHITECT</div>
+        <h1 class="main-title">
+          The Art of transforming imagination into interface
+        </h1>
+      </main>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.getElementById("header-menu");
+      const sideMenu = document.getElementById("side-menu");
+
+      menuBtn.addEventListener("click", (event) => {
+        sideMenu.classList.toggle("slide");
+
+        event.stopPropagation();
+      });
+
+      document.addEventListener("click", (event) => {
+        if (sideMenu.classList.contains("slide")) {
+          const isOpenSideMenu = sideMenu.contains(event.target);
+
+          if (!isOpenSideMenu) {
+            sideMenu.classList.remove("slide");
+          }
+        }
+      });
+    });
+  </script>
+</html>

@@ -1,0 +1,36 @@
+body {
+  background-image: url(./assets/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  padding: 2.5vw 6.2vw 0 6.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  gap: 1.4vw;
+}
+
+main .main-slogan {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1.25vw;
+  font-weight: 400;
+}
+
+main .main-title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 3.45vw;
+  font-weight: 300;
+  letter-spacing: -0.07em;
+  text-align: center;
+}

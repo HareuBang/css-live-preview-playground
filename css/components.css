@@ -1,0 +1,68 @@
+body {
+  background: #0a0a0b;
+  color: white;
+}
+
+#css-main-container {
+  padding: 5.45vw 6.2vw 0 6.2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#css-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.3vw;
+  font-family: "Libre Baskerville", serif;
+  padding-top: 3.45vw;
+}
+
+#css-title {
+  font-size: 2.9vw;
+  font-weight: 300;
+  letter-spacing: -0.1em;
+}
+
+#css-description-wrapper {
+  width: 21vw;
+  padding-bottom: 0.8vw;
+}
+
+#css-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3.2vw;
+  color: white;
+  width: 100%;
+  margin-top: 3.2vw;
+}
+
+.css-list-item {
+  max-height: 32vw;
+  margin-top: 3.2vw;
+}
+
+.css-item-view {
+  width: 32vw;
+  height: 27vw;
+  border-radius: 40px;
+  background-color: white;
+}
+
+.css-item-description {
+  padding-top: 1.3vw;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: center;
+}
+
+.item-description-input {
+  text-align: center;
+  height: 1.2vw;
+}

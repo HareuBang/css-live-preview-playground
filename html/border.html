@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header-menu">menu</div>
+      <a class="header-title" href="../index.html">CSS</a>
+      <a class="header-repo" href="">This Project's Repo</a>
+    </header>
+    <nav id="side-menu">
+      <ul>
+        <li><a href="./border.html">BORDER</a></li>
+        <li><a href="./transform.html">TRANSFORM</a></li>
+      </ul>
+    </nav>
+    <main id="css-main-container">
+      <div id="css-header">
+        <div id="css-title-wrapper">
+          <h3 id="css-title">
+            <span id="css-spane_1">B</span>
+            <span id="css-spane_2">o</span>
+            <span id="css-spane_3">r</span>
+            <span id="css-spane_4">d</span>
+            <span id="css-spane_5">e</span>
+            <span id="css-spane_6">r</span>
+          </h3>
+        </div>
+        <div id="css-description-wrapper">
+          <div id="css-description">
+            Defining the visual boundary, style, thickness, and color of an
+            element's edge.
+          </div>
+        </div>
+      </div>
+      <div id="css-list">
+        <div class="css-list-itme" id="border">
+          <div
+            class="css-item-view"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              class="test-element"
+              style="
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                border-width: medium;
+                border-style: none;
+                border-color: black;
+              "
+            ></div>
+          </div>
+          <div class="css-item-description">
+            border-width:
+            <input class="item-input" id="border-border_width" type="text" />
+            <br />
+            border-style:
+            <input class="item-input" id="border-border_style" type="text" />
+            <br />
+            border-color:
+            <input class="item-input" id="border-border_color" type="text" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.getElementById("header-menu");
+      const sideMenu = document.getElementById("side-menu");
+
+      menuBtn.addEventListener("click", (event) => {
+        sideMenu.classList.toggle("slide");
+        event.stopPropagation();
+      });
+
+      document.addEventListener("click", (event) => {
+        if (sideMenu.classList.contains("slide")) {
+          const isOpenSideMenu = sideMenu.contains(event.target);
+          if (!isOpenSideMenu) {
+            sideMenu.classList.remove("slide");
+          }
+        }
+      });
+    });
+
+    const test = document.querySelector(".test-element");
+
+    const borderWidthInput = document.getElementById("border-border_width");
+    const borderStyleInput = document.getElementById("border-border_style");
+    const borderColorInput = document.getElementById("border-border_color");
+
+    const applyStyle = () => {
+      const width = borderWidthInput.value;
+      const style = borderStyleInput.value;
+      const color = borderColorInput.value;
+
+      if (width.trim() !== "") test.style.borderWidth = width;
+      if (style.trim() !== "") test.style.borderStyle = style;
+      if (color.trim() !== "") test.style.borderColor = color;
+    };
+
+    borderWidthInput.addEventListener("input", applyStyle);
+    borderStyleInput.addEventListener("input", applyStyle);
+    borderColorInput.addEventListener("input", applyStyle);
+  </script>
+</html>
